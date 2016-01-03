@@ -283,7 +283,7 @@ a.anchor-link {
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -376,7 +376,7 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -408,7 +408,7 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -436,19 +436,8 @@ soceksocek
 <span class="nd">@lazy</span>
 <span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
     <span class="k">return</span> <span class="mi">8</span><span class="o">**</span><span class="mi">8</span>
-</pre></div>
 
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="k">print</span> <span class="n">foo</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
+<span class="k">print</span> <span class="n">foo</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="n">foo</span><span class="p">)</span>
 <span class="n">foo</span><span class="p">()</span>
 </pre></div>
 
@@ -456,7 +445,7 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -472,9 +461,10 @@ soceksocek
 <pre>
 <span class="ansired">---------------------------------------------------------------------------</span>
 <span class="ansired">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansigreen">&lt;ipython-input-6-d0a4fdab6b2a&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
-<span class="ansigreen">      1</span> <span class="ansigreen">print</span> foo<span class="ansiyellow">,</span> type<span class="ansiyellow">(</span>foo<span class="ansiyellow">)</span><span class="ansiyellow"></span>
-<span class="ansigreen">----&gt; 2</span><span class="ansiyellow"> </span>foo<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">&lt;ipython-input-5-6ea08e1a5043&gt;</span> in <span class="ansicyan">&lt;module&gt;</span><span class="ansiblue">()</span>
+<span class="ansigreen">      7</span> <span class="ansiyellow"></span>
+<span class="ansigreen">      8</span> <span class="ansigreen">print</span> foo<span class="ansiyellow">,</span> type<span class="ansiyellow">(</span>foo<span class="ansiyellow">)</span><span class="ansiyellow"></span>
+<span class="ansigreen">----&gt; 9</span><span class="ansiyellow"> </span>foo<span class="ansiyellow">(</span><span class="ansiyellow">)</span><span class="ansiyellow"></span>
 
 <span class="ansired">TypeError</span>: &apos;int&apos; object is not callable</pre>
 </div>
@@ -483,10 +473,10 @@ soceksocek
 </div>
 </div>
 
-</div></div></section></section><section><section>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">socek</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -500,56 +490,6 @@ soceksocek
 <span class="nd">@add_socek_img</span>
 <span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;jpg&#39;</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">Foo</span><span class="p">()</span><span class="o">.</span><span class="n">socek</span><span class="p">()</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&apos;socek.jpg&apos;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="nd">@add_socek_img</span>  <span class="c"># WRONG!</span>
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;jpg&#39;</span>
-
-<span class="k">class</span> <span class="nc">SocekMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">socek</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="n">socek</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
-<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">SocekMixin</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>  <span class="c"># OK!</span>
-    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;jpg&#39;</span>
 <span class="n">Foo</span><span class="p">()</span><span class="o">.</span><span class="n">socek</span><span class="p">()</span>
 </pre></div>
 
@@ -557,11 +497,11 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[6]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -576,41 +516,35 @@ soceksocek
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<div class=" highlight hl-ipython2"><pre><span class="nd">@add_socek_img</span>  <span class="c"># WRONG!</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;jpg&#39;</span>
 
-<span class="k">class</span> <span class="nc">multipler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">by</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">by</span> <span class="o">=</span> <span class="n">by</span>
+<span class="k">class</span> <span class="nc">SocekMixin</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">socek</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">socek</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">by</span>
-        <span class="k">return</span> <span class="n">inner</span>
-
-<span class="nd">@multipler</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
-
-<span class="n">adder</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">SocekMixin</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span>  <span class="c"># OK!</span>
+    <span class="n">prefix</span> <span class="o">=</span> <span class="s">&#39;jpg&#39;</span>
+<span class="n">Foo</span><span class="p">()</span><span class="o">.</span><span class="n">socek</span><span class="p">()</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>30</pre>
+<pre>&apos;socek.jpg&apos;</pre>
 </div>
 
 </div>
@@ -624,6 +558,58 @@ soceksocek
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modyfikacja-wyniku">Modyfikacja wyniku<a class="anchor-link" href="#Modyfikacja-wyniku">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">class</span> <span class="nc">multipler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">func</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">func</span> <span class="o">=</span> <span class="n">func</span>
+
+    <span class="k">def</span> <span class="nf">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span>
+
+
+<span class="nd">@multipler</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">adder</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper fragment">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[8]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>15</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p><img src="yo-dawg.jpg" alt="yo dawg"></p>
 
 </div>
@@ -631,7 +617,7 @@ soceksocek
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">multipler</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
@@ -650,11 +636,11 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[9]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -669,7 +655,7 @@ soceksocek
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">adder</span><span class="o">.</span><span class="n">__name__</span>
@@ -679,11 +665,11 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -696,9 +682,28 @@ soceksocek
 </div>
 
 </div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<div class="highlight"><pre><span class="nv">$ </span>paster proutes development.ini#MyProject
+Name            Pattern                        View
+----            -------                        ----
+home            /                              &lt;<span class="k">function</span> decorator&gt;
+login           /login                         &lt;<span class="k">function</span> decorator&gt;
+<span class="nb">logout</span>          /logout                        &lt;<span class="k">function</span> decorator&gt;
+get_xxx         /xxx                           &lt;<span class="k">function</span> decorator&gt;
+get_yyy         /yyy                           &lt;<span class="k">function</span> decorator&gt;
+…
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
@@ -720,11 +725,11 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[11]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -737,6 +742,110 @@ soceksocek
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Modyfikacja-argument&#243;w">Modyfikacja argument&#243;w<a class="anchor-link" href="#Modyfikacja-argument&#243;w">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">upper_args</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">args</span> <span class="o">=</span> <span class="p">[</span><span class="n">arg</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]</span>
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span><span class="n">key</span><span class="p">:</span> <span class="n">arg</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span> <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+        <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">inner</span>
+
+<span class="nd">@upper_args</span>
+<span class="k">def</span> <span class="nf">format_log</span><span class="p">(</span><span class="n">raw_date</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">return</span> <span class="s">&quot;{} -&gt; {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">raw_date</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+
+<span class="n">format_log</span><span class="p">(</span><span class="s">&#39;2016 Jan 12&#39;</span><span class="p">,</span> <span class="n">msg</span><span class="o">=</span><span class="s">&#39;Socek was here.&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper fragment">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&apos;2016 JAN 12 -&gt; SOCEK WAS HERE.&apos;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Dekorator-z-argumentem">Dekorator z argumentem<a class="anchor-link" href="#Dekorator-z-argumentem">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">multipler</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">*</span> <span class="n">by</span>
+        <span class="k">return</span> <span class="n">inner</span>
+    <span class="k">return</span> <span class="n">outer</span>
+
+<span class="nd">@multipler</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="n">adder</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper fragment">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>30</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[14]:</div>
@@ -744,14 +853,9 @@ soceksocek
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
 
-<span class="k">def</span> <span class="nf">multipler</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">multipler</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
     <span class="k">if</span> <span class="nb">callable</span><span class="p">(</span><span class="n">by</span><span class="p">):</span>
-        <span class="n">func</span> <span class="o">=</span> <span class="n">by</span>
-        <span class="n">by</span> <span class="o">=</span> <span class="mi">5</span>
-        <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
-        <span class="k">def</span> <span class="nf">inner</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-            <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="o">*</span> <span class="n">by</span>
-        <span class="k">return</span> <span class="n">inner</span>
+        <span class="k">return</span> <span class="n">multipler</span><span class="p">(</span><span class="mi">5</span><span class="p">)(</span><span class="n">by</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">outer</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
         <span class="nd">@wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
@@ -764,7 +868,7 @@ soceksocek
 <span class="k">def</span> <span class="nf">adder</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
 
-<span class="nd">@multipler</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nd">@multipler</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">sub</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
 
@@ -776,14 +880,14 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>15
-5
+10
 </pre>
 </div>
 </div>
@@ -791,6 +895,16 @@ soceksocek
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Wi&#281;cej-dekorator&#243;w!">Wi&#281;cej dekorator&#243;w!<a class="anchor-link" href="#Wi&#281;cej-dekorator&#243;w!">&#182;</a></h3><p><img src="we-need-to-go-deeper.jpg" alt="we must go deeper"></p>
+
+</div>
+</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -816,7 +930,7 @@ soceksocek
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -839,38 +953,6 @@ a
 <div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span class="n">d</span>
-<span class="n">c</span>
-<span class="n">b</span>
-<span class="n">a</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>&lt;function __main__.inner&gt;</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div></div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
-<div class="inner_cell">
-    <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="k">def</span> <span class="nf">foo</span><span class="p">():</span>
     <span class="k">return</span> <span class="s">&#39;socek&#39;</span>
 <span class="n">foo</span> <span class="o">=</span> <span class="n">a</span><span class="p">(</span><span class="n">b</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="n">d</span><span class="p">(</span><span class="n">foo</span><span class="p">))))</span>
@@ -880,7 +962,7 @@ a
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
@@ -897,7 +979,7 @@ a
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -906,10 +988,10 @@ a
 <h2 id="Przyk&#322;ady">Przyk&#322;ady<a class="anchor-link" href="#Przyk&#322;ady">&#182;</a></h2>
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
@@ -930,14 +1012,14 @@ a
 </div>
 </div>
 
-<div class="output_wrapper">
+<div class="output_wrapper fragment">
 <div class="output">
 
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>10
-3
+8
 </pre>
 </div>
 </div>
@@ -945,10 +1027,10 @@ a
 </div>
 </div>
 
-</div></section></section><section><section>
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span>
@@ -966,7 +1048,7 @@ a
 </div>
 </div>
 
-</div>
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
