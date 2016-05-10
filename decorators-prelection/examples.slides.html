@@ -1147,8 +1147,8 @@ require(
       waitSeconds: 15
     },
     [
-      "reveal.js//lib/js/head.min.js",
-      "reveal.js//js/reveal.js"
+      "../reveal.js//lib/js/head.min.js",
+      "../reveal.js//js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -1164,9 +1164,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "reveal.js//lib/js/classList.js",
+                { src: "../reveal.js//lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "reveal.js//plugin/notes/notes.js",
+                { src: "../reveal.js//plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
