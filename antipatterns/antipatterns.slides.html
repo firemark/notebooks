@@ -279,7 +279,9 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Czym-s&#261;-antywzorce">Czym s&#261; antywzorce<a class="anchor-link" href="#Czym-s&#261;-antywzorce">&#182;</a></h2>
+<h2 id="Czym-s&#261;-antywzorce">Czym s&#261; antywzorce<a class="anchor-link" href="#Czym-s&#261;-antywzorce">&#182;</a></h2><p>Są to wzorce projektowe, gdzie stosowanie ich (przypadkowo lub nie) może utrudnić rozwój kodu w przyszłości.
+Tyle w teorii.</p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -288,7 +290,8 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Dlaczego-o-nich-m&#243;wi&#281;">Dlaczego o nich m&#243;wi&#281;<a class="anchor-link" href="#Dlaczego-o-nich-m&#243;wi&#281;">&#182;</a></h2>
+<h2 id="Dlaczego-o-nich-m&#243;wi&#281;">Dlaczego o nich m&#243;wi&#281;<a class="anchor-link" href="#Dlaczego-o-nich-m&#243;wi&#281;">&#182;</a></h2><p>Dużo początkujących programistów nie wie gdzie robi błąd oraz jakie to może mieć konsekwencje</p>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -303,7 +306,7 @@ a.anchor-link {
 </div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">validate_password</span><span class="p">(</span><span class="n">password</span><span class="p">):</span>
@@ -320,6 +323,20 @@ a.anchor-link {
 </div>
 </div>
 
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: Pozytywne warunki!</li>
+<li>Wady: Zagnieżdżenie kodu</li>
+<li>Rozwiązanie: IfError</li>
+</ul>
+
+</div>
+</div>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -415,6 +432,20 @@ a.anchor-link {
 </div>
 
 </div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: kod zawsze działa</li>
+<li>Wady: nie wiesz dlaczego.</li>
+<li>Rozwiązanie: zgłaszanie do logów błędów jak bardzo chcesz ukryć błąd.</li>
+</ul>
+
+</div>
+</div>
+</div></div><div class="fragment">
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[8]:</div>
@@ -501,13 +532,269 @@ a.anchor-link {
 
 </div>
 </div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">SimpleBeanFactoryAwareAspectInstanceFactory</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a href="https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition">https://github.com/EnterpriseQualityCoding/FizzBuzzEnterpriseEdition</a></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Singletonizm">Singletonizm<a class="anchor-link" href="#Singletonizm">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Config</span><span class="p">():</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">setup_config</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="s1">&#39;…&#39;</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_config</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">cls</span><span class="o">.</span><span class="n">_config</span> <span class="ow">is</span> <span class="bp">None</span><span class="p">:</span>
+            <span class="n">cls</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="n">Config</span><span class="p">()</span>
+        <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">_config</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: masz jeden, ten sam obiekt wszędzie.</li>
+<li>Wady: nie możesz stworzyć drugiego obiektu.</li>
+<li>Rozwiązanie: stworzenie menadżera do takich obiektów.</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Database</span><span class="p">():</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_database</span><span class="p">(</span><span class="n">cls</span><span class="p">):</span>
+        <span class="s1">&#39;…&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="django12.png" alt="Django 1.2"></p>
+
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">DatabaseManager</span><span class="p">():</span>
+    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">get_database</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;default&#39;</span><span class="p">):</span>
+        <span class="s1">&#39;…&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Active-Record">Active Record<a class="anchor-link" href="#Active-Record">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pizza</span> <span class="o">=</span> <span class="n">Pizza</span><span class="p">()</span>
+<span class="n">pizza</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;salami&#39;</span>
+<span class="n">pizza</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="mi">15</span>
+<span class="n">pizza</span><span class="o">.</span><span class="n">save</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: obiektowość, oczywiste, działa, wow super</li>
+<li>Wady: gdzie zapisuje? co zapisuje? co zwróci? Czy zmodyfikuje obiekt? Dokąd dążymy?</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="God-object">God object<a class="anchor-link" href="#God-object">&#182;</a></h3>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">User</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">age</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> <span class="c1"># no racism!</span>
+    <span class="c1">#... 20 pol pozniej ...</span>
+    <span class="n">children</span> <span class="o">=</span> <span class="n">Many2Many</span><span class="p">(</span><span class="n">User</span><span class="p">)</span>
+    <span class="n">shoes</span> <span class="o">=</span> <span class="n">Many2Many</span><span class="p">(</span><span class="n">Boot</span><span class="p">)</span>
+    <span class="n">buildings</span> <span class="o">=</span> <span class="n">Many2Many</span><span class="p">(</span><span class="n">Building</span><span class="p">)</span>
+    <span class="c1">#... 10 relacji pozniej ...</span>
+    
+    <span class="k">def</span> <span class="nf">get_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#...</span>
+    <span class="k">def</span> <span class="nf">get_only_black_children</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="c1">#...</span>
+    <span class="c1">#... 50 metod pozniej ...</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: wygodnie bo Bóg jest wszędzie.</li>
+<li>Wada: wszystko od niego zależy. </li>
+<li>Rozwiązanie: dziel i zwyciężaj.</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="If-ladder">If ladder<a class="anchor-link" href="#If-ladder">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;FOO&#39;</span><span class="p">:</span>
+        <span class="n">execute_foo</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;BAR&#39;</span><span class="p">:</span>
+        <span class="n">execute_bar</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">execute_default</span><span class="p">()</span>
+<span class="c1">#...</span>
+<span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;FOO&#39;</span><span class="p">:</span>
+        <span class="n">clear_foo</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;BAR&#39;</span><span class="p">:</span>
+        <span class="n">clear_bar</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">clear_default</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>Zalety: proste do napisania</li>
+<li>Wada: Zaprzecza obiektowości oraz niewygodne w edycji gdy potrzebujesz N ifów dla M sytuacji</li>
+<li>Rozwiązanie: Fasada</li>
+</ul>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">ObjFacade</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>  <span class="c1"># Konstruktor</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_obj</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">execute</span><span class="p">()</span>
+    
+    <span class="k">def</span> <span class="nf">clear</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">obj</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
 </pre></div>
 
 </div>
