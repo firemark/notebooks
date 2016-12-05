@@ -253,6 +253,7 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Antywzorce">Antywzorce<a class="anchor-link" href="#Antywzorce">&#182;</a></h1><p>Marek Piechula</p>
+<p><img src="logos.png" alt=""></p>
 <p>IPIJ, 2016-12-05</p>
 
 </div>
@@ -264,12 +265,23 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Legenda">Legenda<a class="anchor-link" href="#Legenda">&#182;</a></h2><ul>
+<li>czym są wzorce?</li>
 <li>Czym są antywzorce?</li>
 <li>Dlaczego o nich mówię?</li>
 <li>Antywzorce w programowaniu</li>
 <li>Antywzorce w metodyczne</li>
-<li>Antywzorce w projektowaniu/organizacji</li>
+<li>Linki</li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Czym-s&#261;-wzorce?">Czym s&#261; wzorce?<a class="anchor-link" href="#Czym-s&#261;-wzorce?">&#182;</a></h2><p>Jest to sposób/schemat/architektura który możemy użyć w programie/projekcie/kodzie. Polecam.</p>
 
 </div>
 </div>
@@ -774,7 +786,7 @@ Tyle w teorii.</p>
 <ul>
 <li>Zalety: proste do napisania</li>
 <li>Wada: Zaprzecza obiektowości oraz niewygodne w edycji gdy potrzebujesz N ifów dla M sytuacji</li>
-<li>Rozwiązanie: Fasada</li>
+<li>Rozwiązanie: Manager</li>
 </ul>
 
 </div>
@@ -782,10 +794,10 @@ Tyle w teorii.</p>
 </div></div></section></section><section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">ObjFacade</span><span class="p">:</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">ObjManager</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>  <span class="c1"># Konstruktor</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">obj</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_obj</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
@@ -801,6 +813,114 @@ Tyle w teorii.</p>
 </div>
 </div>
 
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Antywzorce-metodyczne">Antywzorce metodyczne<a class="anchor-link" href="#Antywzorce-metodyczne">&#182;</a></h2><h3 id="Programowanie-typu-kopiuj-i-wklej">Programowanie typu kopiuj i wklej<a class="anchor-link" href="#Programowanie-typu-kopiuj-i-wklej">&#182;</a></h3>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">ObjA</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;a&#39;</span>
+<span class="k">class</span> <span class="nc">ObjB</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;b&#39;</span>
+<span class="k">class</span> <span class="nc">ObjC</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;c&#39;</span>
+<span class="k">class</span> <span class="nc">ObjD</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;d&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="k">class</span> <span class="nc">Obj</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">NAME</span>
+<span class="k">class</span> <span class="nc">ObjA</span><span class="p">(</span><span class="n">Obj</span><span class="p">):</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;a&#39;</span>
+<span class="k">class</span> <span class="nc">ObjB</span><span class="p">(</span><span class="n">Obj</span><span class="p">):</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span>
+<span class="k">class</span> <span class="nc">ObjC</span><span class="p">(</span><span class="n">Obj</span><span class="p">):</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;c&#39;</span>
+<span class="k">class</span> <span class="nc">ObjD</span><span class="p">(</span><span class="n">Obj</span><span class="p">):</span>
+    <span class="n">NAME</span> <span class="o">=</span> <span class="s1">&#39;d&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Odkrywanie-kwadratowego-ko&#322;a">Odkrywanie kwadratowego ko&#322;a<a class="anchor-link" href="#Odkrywanie-kwadratowego-ko&#322;a">&#182;</a></h2>
+</div>
+</div>
+</div><div class="fragment">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="wheel.jpg" alt="Wheels"></p>
+
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="wheel2.jpg" alt="wheel two"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Przedwczesna-optymalizacja">Przedwczesna optymalizacja<a class="anchor-link" href="#Przedwczesna-optymalizacja">&#182;</a></h3>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Linki-oraz-Q&amp;A">Linki oraz Q&amp;A<a class="anchor-link" href="#Linki-oraz-Q&amp;A">&#182;</a></h1><ul>
+<li><a href="https://pl.wikipedia.org/wiki/Antywzorzec_projektowy">https://pl.wikipedia.org/wiki/Antywzorzec_projektowy</a></li>
+<li><a href="https://sourcemaking.com/antipatterns">https://sourcemaking.com/antipatterns</a></li>
+<li><a href="https://hs-silesia.pl/">https://hs-silesia.pl/</a></li>
+</ul>
+
+</div>
+</div>
 </div></section></section>
 </div>
 </div>
