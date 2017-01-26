@@ -1,6 +1,6 @@
 from libc.stdlib cimport malloc, free
 
-cdef int multipler = 8
+cdef int multipler = 1
 cdef int width = 1200 * multipler
 cdef int height = 800 * multipler
 
