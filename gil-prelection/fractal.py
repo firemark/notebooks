@@ -1,5 +1,4 @@
 from sys import argv
-from PIL import Image
 from itertools import chain
 
 n = int(argv[1])
@@ -28,7 +27,9 @@ def get_points(part_num):
 
 
 def show_image(data):
-    im = Image.new('L', (width, height))
-    im.putdata(list(chain.from_iterable(data)))
-    im.show()
+    print ' '.join(
+        ' '.join(
+            str(pixel) for pixel in line
+        ) for line in data
+    )
 
