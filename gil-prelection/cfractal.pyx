@@ -1,8 +1,7 @@
 from libc.stdlib cimport malloc, free
 
-cdef int multipler = 1
-cdef int width = 1200 * multipler
-cdef int height = 800 * multipler
+cdef int width = 1200
+cdef int height = 800
 
 cdef int seek_point(int x, int y) nogil: 
     cdef double zr = 0.0, zi = 0.0, temp_zr = 0.0
@@ -18,7 +17,7 @@ cdef int seek_point(int x, int y) nogil:
     return i
 
 def get_points(int part_num, int part_height):
-    part_height = part_height * multipler
+    part_height = part_height
     cdef int y_shift = part_height * part_num
     cdef int size = width * part_height
     cdef int *data = <int*>malloc(size * sizeof(int))
