@@ -1,0 +1,4 @@
+Jim has 180cm and pet cat.
+Tom has 30PLN & pet dog.
+Ola has pet mouse and items from Tom.
+Marek has nothing.
