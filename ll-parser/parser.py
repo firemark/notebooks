@@ -95,8 +95,8 @@ def make_lend(_1, _2, name):
     }
 
 
-def make_money(kind):
-    return {"type": "money", "kind": kind}
+def make_money(currency):
+    return {"type": "money", "currency": currency}
 
 
 def make_height(unit):

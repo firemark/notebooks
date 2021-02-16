@@ -23,7 +23,7 @@ class Pet(Item):
 
 @dataclass
 class Money(Item):
-    kind: str
+    currency: str
     value: int
 
 
@@ -48,7 +48,7 @@ def eval_item(people, person, raw_item):
     elif type_item == "money":
         person.items.append(
             Money(
-                kind=raw_item["kind"],
+                currency=raw_item["currency"],
                 value=raw_item["value"],
             )
         )
